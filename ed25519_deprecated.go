@@ -17,6 +17,11 @@ func GenerateEd25519Key(src io.Reader) (PrivKey, PubKey, error) {
 	return core.GenerateEd25519Key(src)
 }
 
+// Deprecated: use github.com/ccampbell/go-libp2p-core/crypto.GenerateEd25519KeyFromSeed instead.
+func GenerateEd25519KeyFromSeed(seed string) (PrivKey, PubKey, error) {
+	return core.GenerateEd25519KeyFromSeed(seed)
+}
+
 // Deprecated: use github.com/libp2p/go-libp2p-core/crypto.UnmarshalEd25519PublicKey instead.
 func UnmarshalEd25519PublicKey(data []byte) (PubKey, error) {
 	return core.UnmarshalEd25519PublicKey(data)
